@@ -9,7 +9,6 @@ int main(){
     for(i=0;i<size;i++){
         cout<<"Enter the "<<i+1<<" element";
         cin>>array[i];
-        
     }
     cout<<"Enter the element to be searched";
     cin>>num;
