@@ -1,30 +1,26 @@
 //Write a program to implement linear search in an array
-#include <iostream>
+#include<iostream>
 using namespace std;
-   
 int main(){
-    int input[100], count, i, num;
-       
-    cout << "Enter Number of Elements in Array\n";
-    cin >> count;
-     
-    cout << "Enter " << count << " numbers \n";
-    for(i = 0; i < count; i++){
-        cin >> input[i];
+    int num,size,i;
+    cout<<"Enter the size of the array";
+    cin>>size;
+    int array[size];
+    for(i=0;i<size;i++){
+        cout<<"Enter the "<<i+1<<" element";
+        cin>>array[i];
+        
     }
-      
-    cout << "Enter a number to serach in Array\n";
-    cin >> num;
-    for(i = 0; i < count; i++){
-        if(input[i] == num){
-            cout << "Element found at index " << i;
+    cout<<"Enter the element to be searched";
+    cin>>num;
+    for(i=0;i<size;i++){
+        if(array[i]==num){
+            cout<<"The element is present at the index value "<<i;
             break;
         }
     }
-      
-    if(i == count){
-        cout  << "Element Not Present in Input Array\n";
+    if(i==size){
+        cout<<"the element is not present in the array";
     }
- 
     return 0;
 }
