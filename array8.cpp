@@ -1,45 +1,26 @@
 //Write a program to implement insertion sort
-
-#include <iostream>
-#include <vector>
-
+#include<iostream>
 using namespace std;
-
-void insertionSort(vector<int>& arr) {
-    for (int i = 1; i < arr.size(); i++) {
-        int key = arr[i];
-        int j = i - 1;
-
-        while (j >= 0 && arr[j] > key) {
-            arr[j + 1] = arr[j];
+int main(){
+    int size;
+    cout<<"ENter the size of the array";
+    cin>>size;
+    int arr[size];
+    for(int i=0;i<size;i++){
+        cout<<"Enter the elements";
+        cin>>arr[i];
+    }
+    for(int i=1;i<size;i++){
+        int current=arr[i];
+        int j=i-1;
+        while(arr[j]>current && j>=0){
+            arr[j+1]=arr[j];
             j--;
         }
-
-        arr[j + 1] = key;
+        arr[j+1]=current;
     }
-}
-
-int main() {
-    vector<int> arr;
-    int n;
-
-    cout << "Enter the number of elements in the array: ";
-    cin >> n;
-
-    cout << "Enter the elements of the array: ";
-    for (int i = 0; i < n; i++) {
-        int element;
-        cin >> element;
-        arr.push_back(element);
+    for(int i=0;i<size;i++){
+        cout<<arr[i];
     }
-
-    insertionSort(arr);
-
-    cout << "Sorted array: ";
-    for (int num : arr) {
-        cout << num << " ";
-    }
-    cout << endl;
-
     return 0;
 }
