@@ -4,7 +4,8 @@ using namespace std;
 int main(){
     int n,reverse_number=0,rem;
     cout<<"enter the number to be reversed";
-    cin>>namespacewhile(n!=0){
+    cin>>n;
+    while(n!=0){
         rem=n%10;
         reverse_number=(reverse_number*10)+rem;
         n=n/10;
