@@ -1,27 +1,17 @@
-//Write a program to find the average og 'n' numbers entered by the user
-#include <iostream>
+//Write a program to find the average of 'n' numbers enter the by the user.
+#include<iostream>
 using namespace std;
-
-int main()
-{
-    cout << "Program to find the Average of n numbers entered by the user\n\n";
-    int n, i, temp;
-    double sum = 0;
-    double average = 0;
-    cout << " Enter the number of integers you want to find the average of : ";
-    cin >> n;
-    cout << "\n\n";
-    for (i = 0; i < n; i++)
+int main(){
+    int avg,sum=0,n,temp;
+    cout<<"Enter the number of that you want to find the average";
+    cin>>n;
+    for(int i=0;i<n;i++)
     {
-        cout << "Enter number" << i + 1 << " :  ";
-        cin >> temp;
-        sum += temp;
+        cout<<"Enter subject "<<i+1<<": ";
+        cin>>temp;
+        sum=sum+temp;
     }
-    average = sum / n;
-
-    cout << "\n\n The Sum of the " << n << " numbers entered by the user is : " << sum << endl;
-
-    cout << "\n\nThe Average of the " << n << " numbers entered by the user is : " << average << endl;
-
+    avg=sum/n;
+    cout<<"Avearge of "<<n<<" subject is:"<<avg;
     return 0;
 }
