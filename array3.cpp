@@ -1,25 +1,20 @@
 //Write a program to find the largest element in the array
-#include <iostream>
+#include<iostream>
 using namespace std;
-
-int main() {
-
-  int i, n;
-  float arr[100];
-
-  cout << "Enter total number of elements(1 to 100): ";
-  cin >> n;
-  cout << endl;
-  for(i = 0; i < n; ++i) {
-    cout << "Enter Number " << i + 1 << " : ";
-    cin >> arr[i];
-  }
-  for(i = 1;i < n; ++i) {
-    if(arr[0] < arr[i])
-      arr[0] = arr[i];
-  }
-
-  cout << endl << "Largest element = " << arr[0];
-
-  return 0;
+int main(){
+    int size;
+    cout<<"Enter the size of the array";
+    cin>>size;
+    int arr[size];
+    for(int i=0;i<size;i++){
+        cout<<"ENter number "<<i+1<<" :";
+        cin>>arr[i];
+    }
+    for(int j=1;j<size;j++){
+        if(arr[0]<arr[j]){
+            arr[0]=arr[j];
+        }
+    }
+    cout<<"Largest element in the array is "<<arr[0];
+    return 0;
 }
